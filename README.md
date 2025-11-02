@@ -15,7 +15,7 @@
 ==================================================
 # Sequence Diagram
 
-![Sequence Diagram](Lap6%20Sequence%20Diagram.png)
+![Sequence Diagram](images/Lap6%20Sequence%20Diagram.png)
 ==================================================
 <img width="805" height="865" alt="image" src="https://github.com/user-attachments/assets/c08441a2-3be2-4dfa-803a-a6a9cc688822" />
 
