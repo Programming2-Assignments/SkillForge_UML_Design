@@ -1,0 +1,68 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+
+actor User
+actor Student
+actor Instructor
+actor Admin
+
+User <|-- Student
+User <|-- Instructor
+User <|-- Admin
+
+rectangle {
+  (Login) as UC_LOGIN
+}
+
+rectangle "Student Use Cases" as STUDENT {
+  (Browse Courses) as UC_BROWSE
+  (Enroll in Course) as UC_ENROLL
+  (Complete Lesson) as UC_LESSON
+  (Take Quiz) as UC_QUIZ
+  (Earn Certificate) as UC_CERT
+  (View Personal Analytics) as UC_ANALYTICS_S
+}
+
+rectangle "Instructor Use Cases" as INSTRUCTOR {
+  (Create Course) as UC_CREATE
+  (Manage Course Content) as UC_MANAGE
+  (Upload Lessons) as UC_UPLOAD
+  (Design Quiz) as UC_DESIGN
+}
+
+rectangle "Admin Use Cases" as ADMIN {
+  (Manage Users) as UC_USERS
+  (Approve/Remove Course) as UC_APPROVE
+  (Monitor Platform Analytics) as UC_ANALYTICS_A
+}
+
+User -- UC_LOGIN
+
+Student -- UC_BROWSE
+Student -- UC_ENROLL
+Student -- UC_LESSON
+Student -- UC_QUIZ
+Student -- UC_CERT
+Student -- UC_ANALYTICS_S
+
+
+Instructor -- UC_MANAGE
+Instructor -- UC_UPLOAD
+Instructor -- UC_DESIGN
+Instructor -- UC_CREATE
+
+Admin -- UC_USERS
+Admin -- UC_APPROVE
+Admin -- UC_ANALYTICS_A
+
+UC_CERT <. UC_LESSON : <<include>>
+UC_CERT <. UC_QUIZ : <<include>>
+UC_MANAGE <. UC_UPLOAD : <<include>>
+UC_MANAGE <. UC_DESIGN : <<include>>
+UC_APPROVE <. UC_CREATE : <<include>>
+UC_BROWSE <. UC_ENROLL : <<extend>>
+
+
+@enduml
