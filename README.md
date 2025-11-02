@@ -13,6 +13,13 @@
 
 ### 4- (extend) links show optional behavior (enrolling in course is an optional extension when browsing courses).
 ==================================================
+
+# Activity Diagram
+
+<img width="802" height="637" alt="ActivityDiagram" src="https://github.com/user-attachments/assets/fec1feab-3e92-4049-8f74-03190e132b35" />
+
+==================================================
+
 # Sequence Diagram
 
 ![Sequence Diagram](images/Lap6%20Sequence%20Diagram.png)
