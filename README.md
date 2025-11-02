@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Use Case Diagram
 
 ---
@@ -12,3 +13,8 @@
 ### 3- (include) links show steps (earning a certificate must include completing a lesson).
 
 ### 4- (extend) links show optional behavior (enrolling in course is an optional extension when browsing courses).
+=======
+# Sequence Diagram
+
+![Sequence Diagram](Lap6%20Sequence%20Diagram.png)
+>>>>>>> Youssef
